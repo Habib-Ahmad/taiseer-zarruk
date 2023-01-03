@@ -19,5 +19,14 @@ export const theme = createTheme({
         },
       },
     },
+
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          width: "50%",
+          maxWidth: "150px",
+        },
+      },
+    },
   },
 });
