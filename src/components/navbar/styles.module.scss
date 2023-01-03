@@ -1,0 +1,57 @@
+@import "../../styles/main.module.scss";
+
+.container {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+  width: 100vw;
+  background: linear-gradient($color-black, transparent);
+  padding: 0 10vw;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.nav {
+  color: $color-text;
+  @include responsive(md) {
+    display: none;
+  }
+}
+
+.btn {
+  font-size: 0.85rem;
+  margin: 0 20px;
+  text-align: center;
+  &:hover {
+    color: $color-white;
+    transition: all 200ms;
+  }
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+  @include responsive(md) {
+    display: block;
+  }
+}
+
+.navMobile {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bg;
+  height: 100%;
+  padding: 50px 10px;
+
+  a {
+    color: $color-text;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}

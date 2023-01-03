@@ -1,11 +1,14 @@
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../themes/theme";
+import Layout from "../components/Layout";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
