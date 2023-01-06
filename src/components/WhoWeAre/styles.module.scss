@@ -1,0 +1,140 @@
+@import "../../styles/main.module.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  @include responsive(lg) {
+    flex-direction: column;
+  }
+
+  & > * {
+    width: 50vw;
+    height: 300px;
+    @include responsive(lg) {
+      width: 100vw;
+      height: 400px;
+    }
+  }
+
+  .about {
+    padding: 50px 10vw;
+    transition: all 500ms ease-in-out;
+    position: relative;
+
+    @media (min-width: 1200px) {
+      &:hover {
+        cursor: pointer;
+        background-color: #0f5939cc;
+        background-blend-mode: overlay;
+
+        & > * {
+          color: $color-white;
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: $color-grey;
+      font-weight: 600;
+    }
+
+    .text {
+      color: $color-grey;
+      font-weight: 500;
+    }
+
+    .arrow {
+      position: absolute;
+      left: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: left 200ms ease-out, opacity 200ms ease;
+      @include responsive(md) {
+        display: none;
+      }
+    }
+
+    &:hover .arrow {
+      animation: bounce 250ms ease-out 200ms;
+      left: calc(100% - 15%);
+      opacity: 1;
+    }
+  }
+
+  .projects {
+    position: relative;
+    overflow: hidden;
+
+    .helicopter {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      height: auto;
+      z-index: -100;
+      transition: scale 500ms ease-in-out;
+
+      @include responsive(md) {
+        object-position: left;
+        width: auto;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      &:hover {
+        cursor: pointer;
+
+        .helicopter {
+          scale: 1.2;
+        }
+
+        .overlay {
+          opacity: 1;
+        }
+      }
+    }
+
+    .overlay {
+      opacity: 0;
+      display: grid;
+      place-items: center;
+      position: absolute;
+      inset: 0;
+      z-index: 100;
+      background-color: #0f5939cc;
+      width: 100%;
+      height: 100%;
+      transition: opacity 300ms ease-in-out;
+
+      .textWrapper {
+        color: $color-white;
+        text-align: center;
+        h2 {
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    left: calc(100% - 15%);
+  }
+  50% {
+    left: calc(100% - 10%);
+  }
+}
