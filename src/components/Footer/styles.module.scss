@@ -1,0 +1,110 @@
+@import "../../styles/main.module.scss";
+
+.container {
+  min-height: 200px;
+  background-color: $color-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10vw;
+  color: $color-text;
+  @include responsive(md) {
+    padding: 20px 5vw;
+  }
+  @include responsive(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10vw;
+  }
+
+  .logo {
+    width: 200px;
+    height: 200px;
+    flex: 1.2;
+    @include responsive(sm) {
+      width: 150px;
+      height: 150px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .col {
+    margin: 0 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    @include responsive(sm) {
+      margin: 30px 0;
+    }
+
+    &.contact {
+      flex: 1.8;
+      .title {
+        margin-left: 0;
+      }
+    }
+
+    &.follow {
+      .title {
+        margin-left: 25%;
+      }
+      .items a {
+        margin-left: 25%;
+      }
+      @include responsive(sm) {
+        .title {
+          margin-left: 0;
+        }
+        .items a {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .title {
+      color: $color-white;
+      margin-bottom: 10px;
+      font-weight: 600;
+      margin-left: 35%;
+      @include responsive(sm) {
+        margin-left: 0;
+      }
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        margin-left: 35%;
+        margin-bottom: 5px;
+        font-size: 0.85rem;
+        &:hover {
+          color: $color-white;
+        }
+        @include responsive(sm) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .detail {
+      margin-bottom: 7px;
+      font-size: 0.85rem;
+      &:hover {
+        color: $color-white;
+        cursor: pointer;
+      }
+    }
+  }
+}

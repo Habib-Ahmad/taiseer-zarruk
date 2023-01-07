@@ -1,4 +1,4 @@
-import Header from "../components/header";
+import Header from "../components/Header";
 import WhatWeDo from "../components/WhatWeDo";
 import WhoWeAre from "../components/whoWeAre";
 import styles from "../styles/home.module.scss";

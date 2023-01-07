@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../assets/logo.svg";
 import menu from "../../assets/menu.svg";
 import styles from "./styles.module.scss";
@@ -55,9 +56,9 @@ const Navbar = () => {
       >
         <nav className={styles.navMobile}>
           {links.map((link) => (
-            <a href={link.to} key={link.name} className={styles.btn}>
+            <Link href={link.to} key={link.name} className={styles.btn}>
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
       </SwipeableDrawer>
