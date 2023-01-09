@@ -1,0 +1,15 @@
+@import "../../styles/main.module.scss";
+
+.container {
+  min-height: 60vh;
+  display: grid;
+  align-items: center;
+  padding: 0 10vw;
+  color: $color-white;
+  background: url(../../assets/about-header-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  background-blend-mode: multiply;
+}
