@@ -1,0 +1,64 @@
+@import "../../styles/main.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+.container {
+  min-height: 100vh;
+  padding: 60px 10vw;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .tag {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 120px;
+  }
+
+  .processes {
+    display: grid;
+    padding: 0 15vw;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 120px;
+    @include responsive(md) {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0 10vw;
+    }
+
+    .process {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .number {
+        font-size: 8rem;
+        line-height: 3rem;
+        margin-right: 20px;
+        font-family: "Poppins", sans-serif;
+        padding-top: 0;
+        width: fit-content;
+        height: fit-content;
+
+        &.grey {
+          color: $color-grey;
+        }
+      }
+
+      .step {
+        .title {
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+
+        .description {
+          font-size: 0.85rem;
+          font-weight: 900;
+          color: $color-grey;
+        }
+      }
+    }
+  }
+}

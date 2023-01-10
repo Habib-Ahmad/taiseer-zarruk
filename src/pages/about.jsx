@@ -1,4 +1,5 @@
 import AboutHeader from "../components/AboutHeader";
+import OurProcess from "../components/OurProcess";
 import WhatWeDo from "../components/WhatWeDo";
 import WhoWeAre from "../components/whoWeAre";
 
@@ -8,6 +9,7 @@ const About = () => {
       <AboutHeader />
       <WhoWeAre />
       <WhatWeDo />
+      <OurProcess />
     </>
   );
 };
