@@ -37,5 +37,19 @@ export const theme = createTheme({
         },
       },
     },
+
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          color: "#ffffff99",
+        },
+        notchedOutline: {
+          borderColor: "#ffffff99",
+          "&:hover": {
+            borderColor: "#ffffff99",
+          },
+        },
+      },
+    },
   },
 });
